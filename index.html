@@ -1,145 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Hamada</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Portfolio Hamada - Fullstack Developer</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="styles.css">
+
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Hamada's Portfolio</h1>
-            <p>Welcome to my portfolio! I'm passionate about creating beautiful and functional web experiences.</p>
+<body class="bg-gradient-to-br from-gray-900 via-gray-950 to-gray-800 text-white font-sans">
+
+    <!-- Header -->
+    <header id="main-header" class="flex flex-wrap justify-between items-center px-4 sm:px-6 py-4 sm:py-6 bg-gradient-to-r from-blue-900/60 via-gray-900/80 to-indigo-900/60 shadow-lg sticky top-0 z-50 backdrop-blur-md transition-all duration-300">
+        <div class="flex items-center gap-4 select-none">
+            <span class="text-blue-500 text-3xl animate-spin-slow drop-shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-9 h-9">
+                  <rect x="3" y="3" width="18" height="18" rx="4" fill="#2563eb"/>
+                  <path d="M8 8h8v2H8zm0 4h5v2H8z" fill="#fff"/>
+                </svg>
+            </span>
+            <span class="ml-1 text-3xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent animate-gradient-x">Hamada Portfolio</span>
         </div>
+        <nav class="flex gap-2 md:gap-6 text-base font-semibold">
+            <a href="#home" class="nav-link relative px-2 py-1 group transition-colors duration-200 whitespace-nowrap">
+                <span class="group-hover:text-blue-400 transition">Home</span>
+                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded group-hover:w-full transition-all duration-300"></span>
+            <a href="#about" class="nav-link relative px-2 py-1 group transition-colors duration-200 whitespace-nowrap">
+                <span class="group-hover:text-blue-400 transition">About</span>
+                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded group-hover:w-full transition-all duration-300"></span>
+            </a>
+            <a href="#portfolio" class="nav-link relative px-2 py-1 group transition-colors duration-200 whitespace-nowrap">
+                <span class="group-hover:text-blue-400 transition">Portfolio</span>
+                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded group-hover:w-full transition-all duration-300"></span>
+            </a>
+            <a href="#contact" class="nav-link relative px-2 py-1 group transition-colors duration-200 whitespace-nowrap">
+                <span class="group-hover:text-blue-400 transition">Contact</span>
+                <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded group-hover:w-full transition-all duration-300"></span>
+            </a>
+        </div>
+        </nav>
     </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <img src="img/IMG_1244.jpg" alt="Hamada" class="profile-pic">
-            <p>Hi, I'm Hamada, a web designer and developer based in Probolinggo. With a background in Bachelor of Information Engineering, I have 1 year of experience in crafting responsive and engaging user interfaces.</p>
-            <p>My skills include HTML5, CSS3, JavaScript, and various frontend frameworks like Bootstrap and React. I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
-            <p>When I'm not coding, you can find me exploring new technologies, sketching UI concepts, or enjoying a good book.</p>
+    <!-- Hero Section -->
+    <section id="home" class="relative flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-20 min-h-[70vh] fade-in-section overflow-hidden">
+        <!-- Decorative background shapes -->
+        <span class="absolute -top-20 -left-20 w-72 h-72 bg-gradient-to-br from-blue-500/30 via-cyan-400/20 to-purple-500/30 rounded-full blur-2xl animate-pulse-slow z-0"></span>
+        <span class="absolute bottom-0 right-0 w-60 h-60 bg-gradient-to-tr from-purple-500/20 via-blue-400/10 to-cyan-400/20 rounded-full blur-2xl animate-pulse-slow z-0"></span>
+        <div class="w-full md:w-1/2 space-y-8 z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight drop-shadow-xl">
+                I’m <span class="text-blue-400 animate-text-glow">Hamada</span>,<br>
+                <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent animate-gradient-x drop-shadow-lg">Fullstack Web Programmer</span>
+            </h1>
+            <p class="text-gray-200 text-lg md:text-xl drop-shadow-md">
+                Saya seorang fullstack developer dengan keahlian <span class="text-blue-400 font-semibold">Laravel 12</span>, <span class="text-cyan-400 font-semibold">Tailwind CSS</span>, <span class="text-purple-400 font-semibold">ReactJS</span>, PHP, dan JavaScript.
+            </p>
+            <a href="/assets/CV HAMADA.pdf" target="_blank" class="inline-block mt-4 px-8 py-4 bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 text-white font-bold rounded-lg btn-glow shadow-xl uppercase tracking-wider transition-transform hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-blue-400/40 focus:outline-none">
+                <span class="inline-flex items-center gap-2">
+                    Lihat CV Saya
+                </span>
+            </a>
+        </div>
+        <div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center z-10">
+            <span class="relative inline-block animate-float">
+                <span class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400 via-cyan-400 to-purple-500 blur-lg opacity-60 animate-spin-slow"></span>
+                <img src="assets/Hamada.png" alt="Foto Hamada" class="relative rounded-full w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 object-cover mx-auto shadow-2xl border-4 border-gray-900 glass max-w-full h-auto z-10">
+            </span>
         </div>
     </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <div class="skill">
-                    <h3>Web Development</h3>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 90%;">90%</div>
+    <!-- About Me -->
+    <section id="about" homeclass="px-6 md:px-20 py-16 mb-4 fade-in-section">
+    <div class="relative glass p-6 sm:p-10 md:p-16 overflow-hidden">
+        <!-- Animated background shape -->
+        <span class="absolute -top-24 -left-24 w-80 h-80 bg-gradient-to-br from-blue-500/20 via-cyan-400/10 to-purple-500/20 rounded-full blur-2xl animate-pulse-slow z-0"></span>
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-blue-400 drop-shadow-lg fade-in-section about-stagger" data-delay="0">About Me</h2>
+            <p class="text-gray-200 max-w-2xl mb-8 text-lg leading-relaxed fade-in-section about-stagger" data-delay="1">
+                Saya membangun aplikasi web modern dan efisien, mulai dari backend menggunakan <span class="text-blue-400 font-semibold">Laravel &amp; PHP</span> hingga frontend interaktif dengan <span class="text-cyan-400 font-semibold">React</span> dan <span class="text-purple-400 font-semibold">TailwindCSS</span>. Saya berkomitmen pada clean code, performa, dan pengalaman pengguna terbaik.
+            </p>
+            <h3 class="text-2xl font-semibold mb-8 text-white fade-in-section about-stagger" data-delay="2">My Tech Stack</h3>
+            <div class="flex flex-wrap gap-10 justify-start items-center ">
+                <!-- Laravel -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="0">
+                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-blue-400 animate-tech-glow">
+                        <img src="https://th.bing.com/th/id/OIP.s7ZEqkmVrugV-4MdcVxMaAHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Laravel" class="w-12 h-12">
                     </div>
+                    <span class="mt-2 text-sm text-blue-300 font-semibold tracking-wide">Laravel</span>
+                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-blue-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Framework PHP Modern</span>
                 </div>
-                <div class="skill">
-                    <h3>Graphic Design</h3>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 80%;">80%</div>
+                <!-- PHP -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="1">
+                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-indigo-400 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" alt="PHP" class="w-12 h-12">
                     </div>
+                    <span class="mt-2 text-sm text-indigo-200 font-semibold tracking-wide">PHP</span>
+                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-indigo-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Bahasa Backend Populer</span>
                 </div>
-                <div class="skill">
-                    <h3>UI/UX Design</h3>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: 85%;">85%</div>
+                <!-- React -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="2">
+                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-cyan-400 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-12 h-12 animate-spin-slow">
                     </div>
+                    <span class="mt-2 text-sm text-cyan-300 font-semibold tracking-wide">React</span>
+                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-cyan-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">UI Library Modern</span>
                 </div>
-                
-            </div>
-            <div>
-            </div>
-            <h2>Programming Language</h2>
-            <div class="skills-list">
-                <div class="skill">
-                    <h3>HTML</h3>
-                    <p>Saya memiliki pengalaman dalam pengembangan web menggunakan HTML, termasuk HTML5 untuk membuat struktur halaman web yang responsif dan semantik.</p>
-                </div>
-                <div class="skill">
-                    <h3>CSS</h3>
-                    <p>Saya menguasai CSS untuk styling halaman web, termasuk CSS3 untuk desain responsif, animasi, dan tata letak fleksibel.</p>
-                </div>
-                <div class="skill">
-                    <h3>Python</h3>
-                    <p>Saya terampil dalam pengembangan dengan Python, termasuk pemrograman berorientasi objek, pengolahan data, dan pengembangan aplikasi web menggunakan framework seperti Django.</p>
-                </div>
-                <div class="skill">
-                    <h3>JavaScript</h3>
-                    <p>Saya menguasai JavaScript untuk mengembangkan interaktivitas pada halaman web, termasuk manipulasi DOM, AJAX, dan penggunaan framework seperti React untuk pengembangan frontend.</p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    
-    
-
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="gallery">
-                <div class="item">
-                    <img src="img/Screenshot (1).png" alt="Project 1">
-                    <div class="overlay">
-                        <h3>Bookeping Website</h3>
-                        <p>.</p>
-                        <a href="#">View Details</a>
+                <!-- Tailwind CSS -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="3">
+                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-teal-400 animate-tech-glow">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.Y-Fkawpdbck9IViCaAvuKgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tailwind CSS" class="w-12 h-12">
                     </div>
+                    <span class="mt-2 text-sm text-teal-300 font-semibold tracking-wide">Tailwind CSS</span>
+                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-teal-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">CSS Utility Framework</span>
                 </div>
-                <div class="item">
-                    <img src="img/Screenshot (2).png" alt="Project 2">
-                    <div class="overlay">
-                        <h3>Puff Pastry Website</h3>
-                        <p>A brief description of this project.</p>
-                        <a href="#">View Details</a>
+                <!-- JavaScript -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="4">
+                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-yellow-300 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-12 h-12">
                     </div>
+                    <span class="mt-2 text-sm text-yellow-200 font-semibold tracking-wide">JavaScript</span>
+                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-yellow-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Bahasa Frontend & Backend</span>
                 </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <div class="contact-form">
-                <form id="contact-form" method="post" action="#">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
+                <!-- MySQL -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="5">
+                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-blue-300 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-12 h-12">
                     </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required>
+                    <span class="mt-2 text-sm text-blue-200 font-semibold tracking-wide">MySQL</span>
+                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-blue-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Database Relasional</span>
+                </div>
+                <!-- HTML5 -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="6">
+                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-orange-300 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-12 h-12">
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="mt-2 text-sm text-orange-200 font-semibold tracking-wide">HTML5</span>
+                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-orange-900/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Markup Web Standar</span>
+                </div>
+                <!-- CSS3 -->
+                <div class="flex flex-col items-center group relative cursor-pointer fade-in-section about-stagger" data-delay="7">
+                    <div class="bg-white rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform duration-200 border-2 border-transparent group-hover:border-blue-100 animate-tech-glow">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-12 h-12">
                     </div>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-            <div class="contact-info">
-                <p>If you have any questions or want to discuss a project, feel free to contact me via the following:</p>
-                <ul>
-                    <li>Email: hamadafaisal18@gmail.com</li>
-                    <li>Phone: +62 823-3411-6929</li>
-                    <li>Address: Probolinggo, East Java, Indonesia</li>
-                </ul>
+                    <span class="mt-2 text-sm text-blue-100 font-semibold tracking-wide">CSS3</span>
+                    <span class="absolute left-1/2 -bottom-8 -translate-x-1/2 opacity-0 group-hover:opacity-100 bg-blue-800/90 text-xs text-white px-3 py-1 rounded shadow transition-opacity duration-200 z-20">Styling Web Modern</span>
+                </div>
             </div>
         </div>
     </section>
-    
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Hamada's Portfolio. Created with passion by Hamada.</p>
+    <!-- My Work -->
+    <section id="portfolio" class="px-6 md:px-20 py-16 fade-in-section">
+        <h2 class="text-4xl font-extrabold mb-4 text-blue-400 drop-shadow-lg">My Work</h2>
+        <p class="text-gray-300 mb-10 text-lg">Berikut adalah beberapa project yang pernah saya kerjakan menggunakan Laravel, React, dan teknologi modern lainnya.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-blue-900/30 hover:scale-105 transition-transform duration-200 glass fade-in-section project-stagger" data-delay="0">
+                <h3 class="font-bold text-2xl mb-2 text-blue-300">Media Review Teknologi</h3>
+                <p class="text-gray-300">Website media review berbasis CMS dengan menggunakan WordPress. Menyediakan fitur manajemen konten, kategori, dan user-friendly untuk publikasi artikel review.</p>
+                <button onclick="toggleDoc('doc1')" class="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded shadow transition">Lihat Dokumentasi</button>
+                <div id="doc1" class="hidden mt-4 p-4 bg-gray-900 border border-blue-700 rounded text-left text-sm">
+                    <strong>Dokumentasi Project 1:</strong><br>
+                    <span class="text-gray-300">(foto dokumentasi)</span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-cyan-900/30 hover:scale-105 transition-transform duration-200 glass fade-in-section project-stagger" data-delay="1">
+                <h3 class="font-bold text-2xl mb-2 text-cyan-300">Sistem Informasi Laboratorium DPUPR Kab. Probolinggo</h3>
+                <p class="text-gray-300">Website statis Sistem Informasi Pelayanan Laboratorium Pengujian dan Sewa Alat Berat DPU PR menggunakan teknologi React Native. Menampilkan informasi layanan, jadwal, dan kontak secara interaktif.</p>
+                <button onclick="toggleDoc('doc2')" class="mt-4 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded shadow transition">Lihat Dokumentasi</button>
+                <div id="doc2" class="hidden mt-4 p-4 bg-gray-900 border border-cyan-700 rounded text-left text-sm">
+                    <strong>Dokumentasi Project 2:</strong><br>
+                    <span class="text-gray-300">(foto dokumentasi)</span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-6 rounded-2xl shadow-xl border border-purple-900/30 hover:scale-105 transition-transform duration-200 glass fade-in-section project-stagger" data-delay="2">
+                <h3 class="font-bold text-2xl mb-2 text-purple-300">Aplikasi Uji Etik Penelitian Kesehatan</h3>
+                <p class="text-gray-300">Aplikasi berbasis website untuk pelayanan uji etik penelitian kesehatan Universitas Nurul Jadid Paiton dengan teknologi Laravel 12, Tailwind CSS, dan NPM. Mendukung proses pengajuan, review, dan tracking status penelitian.</p>
+                <button onclick="toggleDoc('doc3')" class="mt-4 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded shadow transition">Lihat Dokumentasi</button>
+                <div id="doc3" class="hidden mt-4 p-4 bg-gray-900 border border-purple-700 rounded text-left text-sm">
+                    <strong>Dokumentasi Project 3:</strong><br>
+                    <span class="text-gray-300">(foto dokumentasi)</span>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section id="contact" class="px-4 md:px-20 py-16 fade-in-section">
+        <h2 class="text-4xl font-extrabold mb-4 text-blue-400 drop-shadow-lg">Contact Me</h2>
+        <p class="text-gray-300 mb-10 text-lg">Jika Anda tertarik untuk bekerja sama atau memiliki pertanyaan, jangan ragu untuk menghubungi saya melalui formulir di bawah ini.</p>
+    <form class="w-full max-w-xl mx-auto bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 p-4 sm:p-8 rounded-2xl shadow-xl border border-blue-900/30 glass">
+            <div class="mb-6">
+                <label for="name" class="block text-gray-200 mb-2 font-semibold">Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Name" required>
+            </div>
+            <div class="mb-6">
+                <label for="email" class="block text-gray-200 mb-2 font-semibold">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Email Address" required>
+            </div>
+            <div class="mb-6">
+                <label for="message" class="block text-gray-200 mb-2 font-semibold">Message</label>
+                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 text-white font-bold py-3 rounded-lg btn-glow shadow-lg uppercase tracking-wider hover:scale-105 transition-transform duration-200">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <!-- Social Media -->
+    <section id="Social" class="text-center py-12 border-t border-gray-700 fade-in-section">
+        <h3 class="text-2xl font-bold mb-6 text-blue-400">Follow Me</h3>
+    <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-2xl sm:text-3xl">
+            <a href="https://www.facebook.com/profile.php?id=100013204203837&mibextid=LQQJ4d" target="_blank" class="hover:text-blue-400 icon-hover transition-transform duration-200" title="Facebook" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.326 24H12.82v-9.294H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0z"/></svg>
+            </a>
+            <a href="#" class="hover:text-cyan-400 icon-hover transition-transform duration-200" title="Twitter" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M24 4.557a9.93 9.93 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.92 4.92 0 00-8.384 4.482C7.691 8.095 4.066 6.13 1.64 3.161c-.542.929-.856 2.01-.857 3.17 0 2.188 1.115 4.116 2.823 5.247a4.904 4.904 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 01-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 010 21.543a13.94 13.94 0 007.548 2.209c9.058 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A9.936 9.936 0 0024 4.557z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/madaaafsh/" class="hover:text-pink-400 icon-hover transition-transform duration-200" title="Instagram" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" class="w-8 h-8"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17" cy="7" r="1.5"/></svg>
+            </a>
+            <a href="#" class="hover:text-blue-500 icon-hover transition-transform duration-200" title="LinkedIn" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.845-1.563 3.042 0 3.604 2.003 3.604 4.605v5.591z"/></svg>
+            </a>
+            <a href="https://github.com/dafaaafsh" class="hover:text-gray-400 icon-hover transition-transform duration-200" title="GitHub" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M12 0C5.371 0 0 5.371 0 12c0 5.303 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577 0-.285-.011-1.04-.017-2.042-3.338.726-4.042-1.611-4.042-1.611-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.606-2.665-.304-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.003-.404c1.019.005 2.047.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.625-5.475 5.921.43.371.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.216.694.825.576C20.565 21.796 24 17.299 24 12c0-6.629-5.371-12-12-12z"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 border-t border-gray-700 mt-4">
+    <p class="text-gray-400 text-xs sm:text-base">&copy; 2024 Hamada. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
-
-
 </body>
+<script>
+    function toggleDoc(id) {
+        const el = document.getElementById(id);
+        if (el.classList.contains('hidden')) {
+            el.classList.remove('hidden');
+        } else {
+            el.classList.add('hidden');
+        }
+    }
+
+    // Highlight menu aktif saat scroll
+    const sections = ['home', 'about', 'portfolio', 'contact'];
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(id => {
+            const section = document.getElementById(id) || document.querySelector(`[id='${id}']`);
+            if (section) {
+                const sectionTop = section.offsetTop - 80;
+                if (pageYOffset >= sectionTop) {
+                    current = id;
+                }
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('text-blue-400');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('text-blue-400');
+            }
+        });
+
+        // Header blur/shadow saat discroll
+        const header = document.getElementById('main-header');
+        if (window.scrollY > 30) {
+            header.classList.add('backdrop-blur-lg', 'shadow-2xl', 'bg-opacity-90');
+        } else {
+            header.classList.remove('backdrop-blur-lg', 'shadow-2xl', 'bg-opacity-90');
+        }
+    });
+
+    // Fade-in animasi section saat muncul di viewport
+    const faders = document.querySelectorAll('.fade-in-section');
+    const appearOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+    };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            // Staggered animation for project cards
+            if (entry.target.classList.contains('project-stagger') || entry.target.classList.contains('about-stagger')) {
+                const delay = parseInt(entry.target.getAttribute('data-delay') || '0', 10);
+                setTimeout(() => {
+                    entry.target.classList.add('is-visible');
+                }, delay * 180);
+            } else {
+                entry.target.classList.add('is-visible');
+            }
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
 </html>
